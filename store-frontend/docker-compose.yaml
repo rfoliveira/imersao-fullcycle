@@ -3,7 +3,9 @@ version: '3'
 services:
   app:
     build: .
-    command: ["chmod", "+x", ".docker/entrypoint.sh"]
+    # command: chmod +x /home/node/app/.docker/entrypoint.sh
+    # entrypoint: /home/node/app/.docker/entrypoint.sh
+    # command: chmod +x ./.docker/entrypoint.sh
     entrypoint: ./.docker/entrypoint.sh
     container_name: imersao-fullcycle-store-frontend-app
     ports:
